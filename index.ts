@@ -4,7 +4,7 @@ const app = new Application();
 
 const router = new Router();
 router.get("/", (ctx) => {
-  ctx.response.body = "Hello";
+  ctx.response.body = Math.floor(Math.random() * 100000);
 });
 app.use(router.routes());
 app.use(router.allowedMethods());
